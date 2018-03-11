@@ -16,7 +16,7 @@ class UserPolicy
      */
     public function __construct()
     {
-        //
+        //添加了一行注释
     }
 
     public function update(User $currentUser, User $user)
