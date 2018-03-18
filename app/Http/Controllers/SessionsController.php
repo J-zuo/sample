@@ -33,7 +33,7 @@ class SessionsController extends Controller
             return redirect()->intended(route('users.show', [Auth::user()]));
         }else{
             Auth::logout();
-            session->flash('warning','您的账号未激活，请检查邮箱中的邀请码');
+            session()->flash('warning','您的账号未激活，请检查邮箱中的邀请码');
             return redirect('/');
         }
 
