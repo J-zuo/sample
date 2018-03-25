@@ -50,4 +50,10 @@ class User extends Authenticatable
     {
         $this->notify(new ResetPassword($token));
     }
+
+    //在用户模型中指明一个用户拥有多条微博  （一对多的关系）
+    public function statuses()
+    {
+        return $this->hasMany(Status::class);
+    }
 }
